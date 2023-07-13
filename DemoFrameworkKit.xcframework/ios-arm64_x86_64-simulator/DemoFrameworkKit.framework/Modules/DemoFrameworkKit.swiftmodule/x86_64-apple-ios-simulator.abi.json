@@ -1,0 +1,80 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "DemoFrameworkKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DemoFrameworkKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "DemoFrameworkKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FrameworkKit",
+        "printedName": "FrameworkKit",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "openSDK",
+            "printedName": "openSDK(vc:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DemoFrameworkKit0bC0C7openSDK2vcySo16UIViewControllerC_tFZ",
+            "mangledName": "$s16DemoFrameworkKit0bC0C7openSDK2vcySo16UIViewControllerC_tFZ",
+            "moduleName": "DemoFrameworkKit",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16DemoFrameworkKit0bC0C",
+        "mangledName": "$s16DemoFrameworkKit0bC0C",
+        "moduleName": "DemoFrameworkKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

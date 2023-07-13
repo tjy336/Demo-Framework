@@ -1,0 +1,11 @@
+framework module DemoFrameworkKit {
+  umbrella header "DemoFrameworkKit.h"
+
+  export *
+  module * { export * }
+}
+
+module DemoFrameworkKit.Swift {
+  header "DemoFrameworkKit-Swift.h"
+  requires objc
+}

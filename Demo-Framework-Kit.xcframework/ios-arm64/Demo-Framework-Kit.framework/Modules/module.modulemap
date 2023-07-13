@@ -1,4 +1,0 @@
-framework module Demo_Framework_Kit {
-  header "Demo_Framework_Kit-Swift.h"
-  requires objc
-}
