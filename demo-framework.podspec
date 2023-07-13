@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "demo-framework"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "CocoaPod implementation of demo-framework."
 
   # This description is used to generate tags and improve search results.
