@@ -1,0 +1,4 @@
+framework module AuroPayPaymentsSandbox {
+  header "AuroPayPaymentsSandbox-Swift.h"
+  requires objc
+}
