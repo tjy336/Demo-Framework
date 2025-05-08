@@ -122,7 +122,7 @@ DemoNavigator.isLoggingEnabled = true
 ## 许可证 <!-- by 周隆春-->
 
 基于 MIT 许可证开源。
-详见 [LICENSE](https://license/)。
+详见 [LICENSE]([https://license/](https://github.com/tjy336/Demo-Framework/blob/main/LICENSE))。
 ---
 
 ### 项目术语表（中英文对照）<!-- by 许培彬 -->
