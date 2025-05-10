@@ -51,7 +51,7 @@
 
 ---
 
-## 功能 <!-- by 周隆春 -->
+## 功能 
 - **解耦导航**: 无需直接依赖即可跳转控制器。
 - **动态路由**: 支持标识符或 URL 协议跳转。
 - **Swift 5.7+ 支持**: 完全兼容现代 Swift 语法。
@@ -61,7 +61,7 @@
 
 ---
 
-## 系统要求<!-- by 周隆春 -->
+## 系统要求
 - iOS 13.0+
 - Xcode 14.0+
 - Swift 5.7+
@@ -69,7 +69,7 @@
 
 ---
 
-## 安装 <!-- by 许培彬 -->
+## 安装
 
 ### CocoaPods（推荐）
 1. 在 `Podfile` 中添加：
@@ -84,7 +84,7 @@
     import DemoFrameworkKit
     
 
-### 手动安装<!-- by 许培彬 -->
+### 手动安装
 
 1.  从 [Releases](https://github.com/PritKothadiya/Demo-Framework/releases) 页面下载 `DemoFrameworkKit.xcframework`。
     
@@ -95,7 +95,7 @@
 
 ----------
 
-## 使用教程 <!-- by 农松辰 -->
+## 使用教程
 
 ### 基础导航
 
@@ -128,7 +128,7 @@ do {
 
 ----------
 
-## 高级配置 <!-- by 农松辰 -->
+## 高级配置
 
 ### 自定义导航栈
 
@@ -148,14 +148,12 @@ DemoNavigator.isLoggingEnabled = true
 
 ----------
 
-## 许可证 <!-- by 周隆春-->
-
+## 许可证 
 基于 MIT 许可证开源。
 详见 [LICENSE]([https://license/](https://github.com/tjy336/Demo-Framework/blob/main/LICENSE))。
 ---
 
-### 项目术语表（中英文对照）<!-- by 许培彬 -->
-
+### 项目术语表（中英文对照）
 | 中文         | 英文                     | 说明                                   |
 |--------------|--------------------------|----------------------------------------|
 | 框架         | Framework                | 封装可复用功能的代码库                 |
