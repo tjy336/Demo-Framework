@@ -2,7 +2,6 @@
 
 Lightweight modular iOS framework for decoupling view controller navigation logic.  
 Simplify code structure and enable in-app dynamic routing!
-
 ---
 
 ## Project Introduction <!-- by Xu Peibin -->
