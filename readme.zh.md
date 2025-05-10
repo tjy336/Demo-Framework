@@ -12,7 +12,7 @@ Simplify code structure and enable in-app dynamic routing!
 4. [Usage Guide](#usage-guide)
 5. [Advanced Configuration](#advanced-configuration)
 6. [Contributing](#contributing)
-7. [License](#license)
+7. [Project Structure](#Project Structure)
 
 ---
 
