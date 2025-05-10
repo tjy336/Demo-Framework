@@ -101,6 +101,52 @@ iOS 部署目标：11.0+
 Swift 版本：5.0+
 ------
 
+### 高级配置<!-- by 骆柯宇 -->
+
+1. 架构和平台适配
+Info.plist 文件显示该框架支持 iOS 平台的不同架构，包括 arm64 和 x86_64（模拟器）。在项目配置中，你可以根据实际需求进行架构选择和平台适配。
+
+
+2. 框架版本管理
+在 DemoFrameworkKit.h 文件中定义了框架的版本号和版本字符串，可以在代码中使用这些信息进行版本管理和检查。
+
+objc
+// 获取框架版本号
+FOUNDATION_EXPORT double DemoFrameworkKitVersionNumber;
+
+// 获取框架版本字符串
+FOUNDATION_EXPORT const unsigned char DemoFrameworkKitVersionString[];
+
+3. 代码优化和调试
+如果在使用框架过程中遇到性能问题或需要进行调试，可以采取以下措施：
+
+编译优化：在 Xcode 项目的 Build Settings 中，找到 Optimization Level 选项，根据开发阶段选择合适的优化级别。在开发和调试阶段可以选择 None [-O0]，在发布版本中选择 Fastest, Smallest [-Os] 或其他更高级的优化选项。
+调试信息：确保在调试阶段开启调试信息，以便在出现问题时能够进行调试。在 Build Settings 中，找到 Debug Information Format 选项，选择 DWARF with dSYM File。
+
+4. 错误处理和日志记录
+虽然目前代码中没有明确的错误处理和日志记录机制，但在实际使用中可以添加这些功能以提高代码的健壮性和可维护性。
+
+swift
+import DemoFrameworkKit
+
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        do {
+            try FrameworkKit.openSDK(vc: self)
+        } catch {
+            print("Error opening SDK: \(error)")
+        }
+    }
+}
+
+5. 安全和权限配置
+如果框架涉及到一些敏感操作或需要特定的权限，需要在项目的 Info.plist 文件中进行相应的配置。例如，如果框架需要访问用户的位置信息，需要添加以下配置：
+
+xml
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Your app needs access to your location while in use.</string>
+
 ### 项目术语表（中英文对照）<!-- by 滕景雲 -->
 | 中文         | 英文                     | 说明                                   |
 |--------------|--------------------------|----------------------------------------|
