@@ -11,6 +11,17 @@
 
 ---
 
+## 目录
+1. [功能](#功能)
+2. [系统要求](#系统要求)
+3. [安装](#安装)
+4. [使用教程](#使用教程)
+5. [高级配置](#高级配置)
+6. [贡献指南](#贡献指南)
+7. [许可证](#许可证)
+
+---
+
 ## 项目介绍 <!-- by 许培彬 -->
 
 ### 项目背景
@@ -38,122 +49,11 @@
 4. **增强用户体验**  
    借助错误处理与调试日志功能，开发者可发现并解决潜在问题，提供更稳定的用户体验。
 
----
-
-## 目录
-1. [功能](#功能)
-2. [系统要求](#系统要求)
-3. [安装](#安装)
-4. [使用教程](#使用教程)
-5. [高级配置](#高级配置)
-6. [贡献指南](#贡献指南)
-7. [许可证](#许可证)
 
 ---
 
-## 功能 
-- **解耦导航**: 无需直接依赖即可跳转控制器。
-- **动态路由**: 支持标识符或 URL 协议跳转。
-- **Swift 5.7+ 支持**: 完全兼容现代 Swift 语法。
-- **iOS 13+ 适配**: 专为 iOS 13 及以上版本优化。
-- **错误处理**: 内置无效标识符安全检查。
-- **轻量化**: 无第三方依赖。
 
----
-
-## 系统要求
-- iOS 13.0+
-- Xcode 14.0+
-- Swift 5.7+
-- CocoaPods 1.10.0+（如使用 CocoaPods）
-
----
-
-## 安装
-
-### CocoaPods（推荐）
-1. 在 `Podfile` 中添加：
-   ```ruby
-   pod 'demo-framework', '1.0.3'
-
-2.  运行 `pod install`。
-    
-3.  在 Swift 文件中导入框架：
-    
-    swift
-    import DemoFrameworkKit
-    
-
-### 手动安装
-
-1.  从 [Releases](https://github.com/PritKothadiya/Demo-Framework/releases) 页面下载 `DemoFrameworkKit.xcframework`。
-    
-2.  将 `.xcframework` 拖拽至 Xcode 项目。
-    
-3.  在 Target 设置中选择 "Embed & Sign"。
-    
-
-----------
-
-## 使用教程
-
-### 基础导航
-
-1.  **定义控制器标识符**：  
-    在 Storyboard 或代码中设置唯一标识符（如 `"HomeVC"`）。
-    
-2.  **编程式跳转**：
-    
-    swift
-    DemoNavigator.openViewController(identifier: "HomeVC")
-    
-
-### URL 协议支持
-
-使用自定义 URL 跳转（如 `myapp://home`）：
-
-swift
-DemoNavigator.openViewController(url: URL(string: "myapp://home")!)
-
-### 错误处理
-
-优雅处理无效标识符：
-
-swift
-do {
-    try DemoNavigator.safeOpenViewController(identifier: "SettingsVC")
-} catch {
-    print("导航失败: \(error.localizedDescription)")
-}
-
-----------
-
-## 高级配置
-
-### 自定义导航栈
-
-覆盖默认导航控制器：
-
-swift
-DemoNavigator.configureNavigationController(UINavigationController.self)
-
-### 调试日志
-
-启用日志排查问题：
-
-swift
-DemoNavigator.isLoggingEnabled = true
-
-
-
-----------
-
-## 许可证 
-基于 MIT 许可证开源。
-详见 [LICENSE]([https://license/](https://github.com/tjy336/Demo-Framework/blob/main/LICENSE))。
----
-
-### 项目术语表（中英文对照）
+### 项目术语表（中英文对照）<!-- by 滕景雲 -->
 | 中文         | 英文                     | 说明                                   |
 |--------------|--------------------------|----------------------------------------|
 | 框架         | Framework                | 封装可复用功能的代码库                 |
