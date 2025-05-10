@@ -67,7 +67,7 @@
 
 
 
-### XCFramework
+### 知识扩展  XCFramework <!-- by 农松辰 -->
 xcodebuild archive -scheme DemoFrameworkKit -destination "iOS" -archivePath "build/iOS"
 xcodebuild archive -scheme DemoFrameworkKit -destination "iOS Simulator" -archivePath "build/Simulator"
 xcodebuild -create-xcframework \
