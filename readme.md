@@ -147,6 +147,57 @@ xml
 <key>NSLocationWhenInUseUsageDescription</key>
 <string>Your app needs access to your location while in use.</string>
 
+### 贡献指南<!-- by 龙达磊 -->
+如何贡献
+1. 提交问题 (Issue)
+如果您发现任何 bug 或有功能建议，请先检查是否已有相关 issue：
+如果没有，请新建 issue
+清晰描述问题或建议
+如果是 bug，请提供重现步骤和环境信息
+
+2. 代码贡献流程
+第一步：Fork 仓库
+点击 GitHub 页面右上角的 "Fork" 按钮
+克隆您的 fork 到本地：
+git clone https://github.com/您的用户名/Demo-Framework.git
+
+第二步：创建分支
+git checkout -b feature/您的功能名称  # 或 fix/问题描述
+
+第三步：开发与测试
+进行您的修改
+确保代码符合现有风格
+添加/更新相关测试
+运行测试确保通过
+
+第四步：提交代码
+git commit -m "描述您的修改"
+
+第五步：推送更改
+git push origin 您的分支名
+
+第六步：创建 Pull Request
+在 GitHub 上访问您的 fork
+选择您创建的分支
+点击 "New pull request"
+详细描述您的修改内容和原因
+
+编码规范
+遵循现有代码风格
+使用 Swift 5.7+ 语法
+保持 API 兼容性
+为公共 API 添加文档注释
+每个功能/修复应有对应的测试用例
+
+
+其他贡献方式
+改进文档
+翻译文档
+回答其他用户的问题
+分享使用案例
+
+------
+
 ### 项目术语表（中英文对照）<!-- by 滕景雲 -->
 | 中文         | 英文                     | 说明                                   |
 |--------------|--------------------------|----------------------------------------|
