@@ -18,7 +18,7 @@
 4. [使用教程](#使用教程)
 5. [高级配置](#高级配置)
 6. [贡献指南](#贡献指南)
-7. [许可证](#许可证)
+7. [项目结构](#项目结构)
 
 ---
 
@@ -239,4 +239,33 @@ source 'https://cdn.cocoapods.org/'
 
 ###自动化与持续集成
 
+
+
+## 项目结构 <!-- by 周隆春 -->
+
+Demo-Framework/
+├── .gitignore # Git忽略规则配置
+├── Demo-Framework-1.0.4.iml # IntelliJ模块配置文件
+├── demo-framework.podspec # CocoaPods配置文件
+├── Info.plist # Xcode项目配置文件
+├── misc.xml # IDE配置文件
+├── modules.xml # 项目模块配置文件
+├── workspace.xml # IDE工作区配置文件
+└── DemoFrameworkKit/ # 框架核心代码
+├── DemoFrameworkKit.h # 框架主头文件
+├── DemoFrameworkKit-Swift.h # Swift-ObjC桥接头文件
+└── Info.plist # 框架配置文件
+
+
+### 关键文件说明
+
+1. **demo-framework.podspec** - CocoaPods依赖管理配置文件，定义了框架的名称(1.0.3版本)、平台要求(iOS 13.0+)和源码位置(GitHub仓库)。
+
+2. **DemoFrameworkKit.xcframework** - 预编译的二进制框架(未在目录中显示，由podspec引用)，支持:
+   - iOS真机(arm64)
+   - iOS模拟器(arm64/x86_64)
+
+3. **Info.plist** - 包含XCFramework的配置信息，指定了支持的架构和平台。
+
+4. **Swift头文件** - `DemoFrameworkKit-Swift.h` 提供了Swift与Objective-C的互操作性支持，使用Swift 5.7.1编译。
 
