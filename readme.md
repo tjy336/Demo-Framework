@@ -73,6 +73,32 @@
 若项目需兼容较旧的 iOS 版本（如 iOS 10 及以下），需确认框架的最低支持版本（文档中未明确提及，建议检查 Deployment Target）。
 若使用 Swift Package Manager 集成，需确保项目使用 Xcode 11 及以上版本。
 
+### 安装<!----by 李涛 ---->
+1. 使用 CocoaPods 集成（推荐）
+确保已安装 CocoaPods，然后在项目的 Podfile 中添加：
+ruby
+target 'YourAppTarget' do
+  pod 'DemoFrameworkKit', '~> 1.0.4'
+end
+执行安装命令：
+bash
+pod install
+2. 手动集成
+下载框架文件
+从项目仓库下载 DemoFrameworkKit.xcframework。
+添加到 Xcode 项目
+在 Xcode 中打开你的项目。
+选择项目目标 ➔ General ➔ Frameworks, Libraries, and Embedded Content。
+点击 + ➔ Add Other ➔ Add Files。
+导航到并选择 DemoFrameworkKit.xcframework。
+设置嵌入方式为 Embed & Sign。
+配置 Build Settings
+确保 Build Phases ➔ Link Binary With Libraries 中包含 DemoFrameworkKit.framework。
+若使用 Swift，请在 Build Settings ➔ Objective-C Bridging Header 中添加桥接头文件（如果需要）。
+配置要求
+Xcode 版本：12.0 或更高
+iOS 部署目标：11.0+
+Swift 版本：5.0+
 ------
 
 ### 项目术语表（中英文对照）<!-- by 滕景雲 -->
