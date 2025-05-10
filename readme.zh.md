@@ -145,6 +145,38 @@ Answer questions from other users
 Share use cases
 
 ---
+Here's the English translation of your project structure section:
+
+## Project Structure <!-- by Zhou Longchun -->
+
+Demo-Framework/
+├── .gitignore # Git ignore rules configuration
+├── Demo-Framework-1.0.4.iml # IntelliJ module configuration file
+├── demo-framework.podspec # CocoaPods configuration file
+├── Info.plist # Xcode project configuration file
+├── misc.xml # IDE configuration file
+├── modules.xml # Project modules configuration file
+├── workspace.xml # IDE workspace configuration file
+└── DemoFrameworkKit/ # Framework core code
+├── DemoFrameworkKit.h # Framework main header file
+├── DemoFrameworkKit-Swift.h # Swift-ObjC bridging header
+└── Info.plist # Framework configuration file
+
+
+### Key File Descriptions
+
+1. **demo-framework.podspec** - CocoaPods dependency management configuration file that defines the framework name (version 1.0.3), platform requirements (iOS 13.0+), and source location (GitHub repository).
+
+2. **DemoFrameworkKit.xcframework** - Precompiled binary framework (not shown in directory, referenced by podspec), supporting:
+   - iOS devices (arm64)
+   - iOS simulator (arm64/x86_64)
+
+3. **Info.plist** - Contains XCFramework configuration information, specifying supported architectures and platforms.
+
+4. **Swift Header File** - `DemoFrameworkKit-Swift.h` provides Swift-Objective-C interoperability support, compiled with Swift 5.7.1.
+
+The translation maintains all technical terminology while ensuring readability for English-speaking developers. I kept the original file structure format and Markdown styling consistent with the Chinese version.
+
 
 ### Glossary (CN-EN) <!-- by Teng Jingyun -->
 | Chinese       | English                  | Description                                   |
@@ -214,4 +246,6 @@ source 'https://github.com/your-company/Specs.git'
 source 'https://cdn.cocoapods.org/'
 
 ###自动化与持续集成
+
+
 
