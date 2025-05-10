@@ -52,6 +52,28 @@
 
 ---
 
+### 系统要求<!----陈承鑫---->
+1.操作系统
+   iOS 真机：需运行在支持 arm64 架构的 iOS 设备上。
+   iOS 模拟器：需运行在 macOS 系统上，支持 arm64（Apple Silicon）或 x86_64（Intel）架构的模拟器。
+2.开发环境
+   Xcode：需使用支持 XCFramework 格式的版本（建议 Xcode 12.0 及以上）。
+   编译工具链：需兼容 Swift 和 Objective-C 混合开发（如使用 Swift Package Manager 或 CocoaPods 集成时）。
+3.架构支持
+   真机：仅支持 arm64 架构（如 iPhone、iPad 等设备）。
+   模拟器：支持 arm64（Apple Silicon Mac）和 x86_64（Intel Mac）架构。
+4.依赖项
+   无外部依赖项（框架已封装所有必要组件）。
+   需在项目中导入 DemoFrameworkKit.framework 或通过 XCFramework 集成。
+5.集成方式
+   支持手动导入 .framework 文件或通过 XCFramework 集成。
+   支持通过 Swift Package Manager、CocoaPods 或 Carthage 等依赖管理工具集成。
+兼容性说明
+框架通过 XCFramework 格式同时支持真机和模拟器，无需为不同环境单独配置。
+若项目需兼容较旧的 iOS 版本（如 iOS 10 及以下），需确认框架的最低支持版本（文档中未明确提及，建议检查 Deployment Target）。
+若使用 Swift Package Manager 集成，需确保项目使用 Xcode 11 及以上版本。
+
+------
 
 ### 项目术语表（中英文对照）<!-- by 滕景雲 -->
 | 中文         | 英文                     | 说明                                   |
