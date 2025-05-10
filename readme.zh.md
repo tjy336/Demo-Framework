@@ -66,6 +66,32 @@ The framework supports both physical devices and simulators through the XCFramew
 For projects requiring compatibility with older iOS versions (e.g., iOS 10 or earlier), verify the framework's minimum supported version (not explicitly stated in the documentation; check Deployment Target).
 When integrating via Swift Package Manager, ensure Xcode 11 or higher is used.
 
+### Installation Guide <!-- by litao -->
+1. Integration via CocoaPods (Recommended)
+Ensure CocoaPods is installed, then add the following to your project's Podfile:
+ruby
+target 'YourAppTarget' do
+  pod 'DemoFrameworkKit', '~> 1.0.4'
+end
+Execute the installation command:
+bash
+pod install
+2. Manual Integration
+Download the Framework
+Download DemoFrameworkKit.xcframework from the project repository.
+Add to Xcode Project
+Open your project in Xcode.
+Select the project target ➔ General ➔ Frameworks, Libraries, and Embedded Content.
+Click + ➔ Add Other ➔ Add Files.
+Navigate to and select DemoFrameworkKit.xcframework.
+Set the embedding option to Embed & Sign.
+Configure Build Settings
+Ensure Build Phases ➔ Link Binary With Libraries includes DemoFrameworkKit.framework.
+For Swift projects, add an Objective-C bridging header in Build Settings ➔ Objective-C Bridging Header if necessary.
+Configuration Requirements
+Xcode Version: 12.0 or higher
+iOS Deployment Target: 11.0+
+Swift Version: 5.0+
 ---
   
 ### Glossary (CN-EN) <!-- by Teng Jingyun -->
