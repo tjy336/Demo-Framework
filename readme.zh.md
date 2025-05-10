@@ -93,7 +93,59 @@ Xcode Version: 12.0 or higher
 iOS Deployment Target: 11.0+
 Swift Version: 5.0+
 ---
-  
+### Contributing <!-- by long dalei -->
+How to Contribute
+Submit an Issue
+If you find any bugs or have feature suggestions, please first check if there is an existing issue:
+If not, please create a new issue
+Clearly describe the problem or suggestion
+For bugs, provide steps to reproduce and environment details
+
+Code Contribution Process
+
+Step 1: Fork the Repository
+
+Click the "Fork" button in the top-right corner of the GitHub page
+
+Clone your fork locally:
+git clone https://github.com/your-username/Demo-Framework.git  
+
+Step 2: Create a Branch
+git checkout -b feature/your-feature-name  # or fix/issue-description  
+
+Step 3: Development and Testing
+Make your changes
+Ensure the code follows the existing style
+Add/update relevant tests
+Run tests to ensure they pass
+
+Step 4: Commit Changes
+git commit -m "Describe your changes"  
+
+Step 5: Push Changes
+git push origin your-branch-name  
+
+Step 6: Create a Pull Request
+Visit your fork on GitHub
+Select the branch you created
+Click "New pull request"
+Provide a detailed description of your changes and the reasons for them
+
+Coding Standards
+Follow the existing code style
+Use Swift 5.7+ syntax
+Maintain API compatibility
+Add documentation comments for public APIs
+Include corresponding test cases for each feature/fix
+
+Other Ways to Contribute
+Improve documentation
+Translate documentation
+Answer questions from other users
+Share use cases
+
+---
+
 ### Glossary (CN-EN) <!-- by Teng Jingyun -->
 | Chinese       | English                  | Description                                   |
 |---------------|--------------------------|-----------------------------------------------|
