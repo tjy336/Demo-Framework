@@ -45,6 +45,29 @@ To address these pain points, **Demo Framework** was born, aiming to provide dev
 
 ---
 
+### System Requirements <!---by chenchengxin --->
+1.Operating System
+  iOS Devices: Requires iOS devices supporting the arm64 architecture.
+  iOS Simulator: Requires macOS with support for arm64 (Apple Silicon) or x86_64 (Intel) architecture simulators.
+2.Development Environment
+  Xcode: Requires Xcode version 12.0 or higher (to support XCFramework format).
+  Compiler Toolchain: Must be compatible with Swift and Objective-C mixed development (e.g., when integrating via Swift Package Manager or CocoaPods).
+3.Architecture Support
+  Physical Devices: Supports arm64 architecture only (e.g., iPhone, iPad).
+  Simulator: Supports arm64 (Apple Silicon Mac) and x86_64 (Intel Mac) architectures.
+4.Dependencies
+  No external dependencies (the framework encapsulates all necessary components).
+  Requires importing DemoFrameworkKit.framework or integrating via XCFramework in your project.
+5.Integration Methods
+  Supports manual import of .framework files or XCFramework integration.
+  Compatible with dependency managers such as Swift Package Manager, CocoaPods, or Carthage.
+Compatibility Notes
+The framework supports both physical devices and simulators through the XCFramework format, eliminating the need for separate configurations.
+For projects requiring compatibility with older iOS versions (e.g., iOS 10 or earlier), verify the framework's minimum supported version (not explicitly stated in the documentation; check Deployment Target).
+When integrating via Swift Package Manager, ensure Xcode 11 or higher is used.
+
+---
+  
 ### Glossary (CN-EN) <!-- by Teng Jingyun -->
 | Chinese       | English                  | Description                                   |
 |---------------|--------------------------|-----------------------------------------------|
