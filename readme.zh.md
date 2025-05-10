@@ -187,3 +187,31 @@ source 'https://cdn.cocoapods.org/'
 CI/CD Automation
 plaintext
 [Add your CI/CD pipeline configuration here]
+
+### 知识扩展  XCFramework <!-- by 农松辰 -->
+xcodebuild archive -scheme DemoFrameworkKit -destination "iOS" -archivePath "build/iOS"
+xcodebuild archive -scheme DemoFrameworkKit -destination "iOS Simulator" -archivePath "build/Simulator"
+xcodebuild -create-xcframework \
+  -framework "build/iOS.xcarchive/Products/Library/Frameworks/DemoFrameworkKit.framework" \
+  -framework "build/Simulator.xcarchive/Products/Library/Frameworks/DemoFrameworkKit.framework" \
+  -output "DemoFrameworkKit.xcframework"
+
+spec.dependency 'Alamofire', '~> 5.4'  # 允许补丁更新，禁止主版本升级
+
+pod lib lint --allow-warnings  # 检查 podspec 语法
+pod spec lint --verbose        # 验证远程仓库和标签
+
+###打 Git 标签并推送
+git tag 1.0.4
+git push origin --tags
+
+###提交到 CocoaPods 仓库
+pod trunk push demo-framework.podspec
+
+###私有仓库管理
+###若使用私有源，需在 Podfile 顶部声明：
+source 'https://github.com/your-company/Specs.git'
+source 'https://cdn.cocoapods.org/'
+
+###自动化与持续集成
+
