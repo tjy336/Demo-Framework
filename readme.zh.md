@@ -93,6 +93,43 @@ Xcode Version: 12.0 or higher
 iOS Deployment Target: 11.0+
 Swift Version: 5.0+
 ---
+### Advanced Configuration<!-- by luo keyu>
+Architecture and Platform Adaptation
+The Info.plist file indicates that this framework supports different architectures for the iOS platform, including arm64 (physical devices) and x86_64 (simulators). In your project configuration, you can select specific architectures and adapt to platforms according to your requirements.
+Framework Version Management
+The framework's version number and string are defined in DemoFrameworkKit.h, allowing you to manage and check versions in your code:
+objc
+// Get the framework version number
+FOUNDATION_EXPORT double DemoFrameworkKitVersionNumber;
+
+// Get the framework version string
+FOUNDATION_EXPORT const unsigned char DemoFrameworkKitVersionString[];
+
+Code Optimization and Debugging
+If you encounter performance issues or need to debug the framework, consider these steps:
+Compilation Optimization: In Xcode's Build Settings, locate the Optimization Level option. Choose None [-O0] during development/debugging and Fastest, Smallest [-Os] or higher for release builds.
+Debug Information: Ensure debug symbols are enabled during development. In Build Settings, set Debug Information Format to DWARF with dSYM File.
+Error Handling and Logging
+While the current code lacks explicit error handling and logging, you can enhance robustness and maintainability by adding them:
+swift
+import DemoFrameworkKit
+
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        do {
+            try FrameworkKit.openSDK(vc: self)
+        } catch {
+            print("Error opening SDK: \(error)")
+        }
+    }
+}
+
+
+
+Security and Permission Configuration
+If the framework requires sensitive operations or permissions, configure them in your project's Info.plist. For example, to access location data:
+
 ### Contributing <!-- by long dalei -->
 How to Contribute
 Submit an Issue
