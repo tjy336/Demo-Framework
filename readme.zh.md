@@ -53,7 +53,7 @@ To address these pain points, **Demo Framework** was born, aiming to provide dev
   Xcode: Requires Xcode version 12.0 or higher (to support XCFramework format).
   Compiler Toolchain: Must be compatible with Swift and Objective-C mixed development (e.g., when integrating via Swift Package Manager or CocoaPods).
 3.Architecture Support
-  Physical Devices: Supports arm64 architecture only (e.g., iPhone, iPad).
+  Computer: Only the arm64 architecture is supported (for devices such as iPhone and iPad).
   Simulator: Supports arm64 (Apple Silicon Mac) and x86_64 (Intel Mac) architectures.
 4.Dependencies
   No external dependencies (the framework encapsulates all necessary components).
